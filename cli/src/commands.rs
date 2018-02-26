@@ -6,6 +6,7 @@ use lyon::tessellation::{FillOptions, StrokeOptions};
 pub enum Tessellator {
     Default,
     Tess2,
+    Experimental,
 }
 
 #[derive(Clone, Debug)]

@@ -1594,7 +1594,7 @@ impl FlatPathBuilder for EventsBuilder {
 
 /// Helper class that generates a triangulation from a sequence of vertices describing a monotone
 /// polygon (used internally by the `FillTessellator`).
-struct MonotoneTessellator {
+pub(crate) struct MonotoneTessellator {
     stack: Vec<MonotoneVertex>,
     previous: MonotoneVertex,
     triangles: Vec<(VertexId, VertexId, VertexId)>,
@@ -1709,7 +1709,7 @@ impl MonotoneTessellator {
         self.triangles.push((a.id, b.id, c.id));
     }
 
-    fn flush(&mut self, output: &mut GeometryBuilder<Vertex>) {
+    pub fn flush<T>(&mut self, output: &mut GeometryBuilder<T>) {
         for &(a, b, c) in &self.triangles {
             output.add_triangle(a, b, c);
         }

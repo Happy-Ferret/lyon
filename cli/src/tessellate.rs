@@ -47,6 +47,9 @@ pub fn tessellate_path(cmd: TessellateCmd) -> Result<VertexBuffers<Point>, TessE
                     &mut BuffersBuilder::new(&mut buffers, Identity)
                 ).is_ok()
             }
+            Tessellator::Experimental => {
+                false
+            }
         };
 
 
