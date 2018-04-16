@@ -1116,8 +1116,6 @@ fn new_tess1() {
         &FillOptions::default(),
         &mut simple_builder(&mut buffers),
     );
-
-    panic!();
 }
 
 #[test]
@@ -1145,8 +1143,6 @@ fn new_tess_merge() {
         &FillOptions::default(),
         &mut simple_builder(&mut buffers),
     );
-
-    panic!();
 }
 
 // "m 85.728423,257.84471 -21.7607,-11.36642 85.533557,82.88722 80.86714,-82.2058 z m 60.609997,8.9 12.8,13.14 h -26.33 l 13.55,-13.16 z"
